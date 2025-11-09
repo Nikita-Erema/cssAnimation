@@ -1,0 +1,55 @@
+@keyframes collapse {
+    0% {
+        border: 1px solid grey;
+        max-height: 0px;
+    } 
+
+    100% {
+        max-height: 200px;
+    }
+}
+
+@keyframes collapseReverse {
+    0% {
+        max-height: 200px;
+        border: 1px solid grey;
+    } 
+    
+    100% {
+        max-height: 0px;
+    }
+}
+
+.collapse_button {
+    text-transform: uppercase;
+    background-color: rgb(101, 101, 255);
+}
+
+.collapse_text {
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.collapse_text_open {
+    border: 1px  solid grey;
+    animation-name: collapse;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.collapse_text_close {
+    animation-name: collapseReverse;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.collapse_final_open {
+    max-height: 200px;
+    border: 1px solid grey;
+}
+
+.collapse_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
